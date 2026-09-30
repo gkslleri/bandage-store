@@ -3,7 +3,8 @@ import { Search, ShoppingCart, Menu } from 'lucide-react';
 
 export default function Header() {
   return (
-    <header className="bg-white text-slate-800 p-4 flex items-center justify-between px-6 py-6">
+    <header className="bg-white text-slate-800">
+      <div className="flex items-center justify-between px-6 py-6">
       <h1 className="text-2xl font-bold">
         <Link to="/">Bandage</Link>
       </h1>
@@ -20,6 +21,7 @@ export default function Header() {
         <button type="button" aria-label="Menüyü aç">
           <Menu size={20} />
         </button>
+      </div>
       </div>
     </header>
   );
