@@ -19,7 +19,7 @@ export default function EditorsPick() {
           className="relative block h-[500px] w-full overflow-hidden"
         >
           <img
-            src="/images/category-men.jpg"
+            src="/images/category-men.png"
             alt="Erkek giyim koleksiyonu"
             className="h-full w-full object-cover"
           />
