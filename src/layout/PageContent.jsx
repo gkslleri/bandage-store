@@ -1,9 +1,14 @@
+import { Switch } from 'react-router-dom/cjs/react-router-dom';
 import HomePage from '../pages/HomePage';
 
 export default function PageContent() {
   return (
     <main className='flex-1'>
-      <HomePage />
+        <Switch>
+          <Route exact path="/">
+            <HomePage />
+          </Route>
+        </Switch>
     </main>
   );
 }
