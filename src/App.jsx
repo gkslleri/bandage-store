@@ -1,9 +1,9 @@
 
-import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom'
-import './App.css'
-import Footer from './layout/Footer'
-import Header from './layout/Header'
-import PageContent from './layout/PageContent'
+import { BrowserRouter } from 'react-router-dom';
+import './App.css';
+import Footer from './layout/Footer';
+import Header from './layout/Header';
+import PageContent from './layout/PageContent';
 
 function App() {
 
@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Header />
-          <PageContent />
+        <PageContent />
         <Footer />
       </div>
     </BrowserRouter>
