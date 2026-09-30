@@ -78,7 +78,7 @@ export default function Header() {
         <nav
         id="header-menu"
         aria-label="Ana menü"
-        className={` ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center gap-6 pt-8 pb-12 text-2xl text-gray-500 lg:order-2 lg:flex lg:w-auto lg:flex-row lg:py-0 lg:text-sm`}
+        className={` ${isMenuOpen ? 'flex' : 'hidden'} w-full flex-col items-center gap-6 pt-8 pb-12 text-2xl text-gray-500 lg:order-2 lg:flex lg:w-auto lg:flex-row lg:py-0 lg:text-sm`}
       >
         <Link to='/' onClick={() => setIsMenuOpen(false)}>Home</Link>
         
@@ -87,7 +87,7 @@ export default function Header() {
         onClick={() => setIsMenuOpen(false)}
         className="flex items-center gap-1"
         >
-          <span className="lg:hidden">Product</ span>
+          <span className="lg:hidden">Product</span>
           <span className="hidden lg:inline">Shop</span>
           <ChevronDown size={14} className="hidden lg:block" />
         </Link>
