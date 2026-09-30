@@ -7,11 +7,11 @@ import PageContent from './layout/PageContent'
 function App() {
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Header />
       <PageContent />
       <Footer />
-    </>
+    </div>
   )
 }
 
