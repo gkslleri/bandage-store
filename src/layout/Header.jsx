@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, ShoppingCart, Menu, Phone } from 'lucide-react';
+import { Search, ShoppingCart, Menu, Phone, Mail } from 'lucide-react';
 import { useState } from "react";
 
 export default function Header() {
