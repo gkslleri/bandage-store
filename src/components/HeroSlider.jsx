@@ -19,11 +19,11 @@ const slides = [
 ];
 
 export default function HeroSlider() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true});
+    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     useEffect(() => {
-        if(!emblaApi) return;
+        if (!emblaApi) return;
 
         const updateSelectedIndex = () => {
             setSelectedIndex(emblaApi.selectedScrollSnap());
@@ -69,7 +69,7 @@ export default function HeroSlider() {
                                     to='/shop'
                                     className='rounded bg-[#2DC071] px-10 py-4 text-xl font-bold'
                                 >
-                                SHOP NOW
+                                    SHOP NOW
                                 </Link>
                             </div>
                         </div>
@@ -99,18 +99,22 @@ export default function HeroSlider() {
                 aria-label="Slayt seçimi"
                 className="absolute bottom-6 left-1/2 flex -translate-x-1/2"
             >
+                <span
+                    aria-hidden="true"
+                    className={`pointer-events-none absolute left-0 top-1/2 z-10 h-1 w-1/2 -translate-y-1/2 bg-white transition-transform duration-300 ease-in-out ${selectedIndex === 0 ? "translate-x-0" : "translate-x-full"
+                        }`}
+                />
+
                 {slides.map((slide, index) => (
                     <button
                         key={slide.id}
                         type="button"
                         aria-label={`${index + 1}. slayta git`}
-                        aria-current={selectedIndex === index ? 'true' : undefined}
+                        aria-current={selectedIndex === index ? "true" : undefined}
                         onClick={() => emblaApi?.scrollTo(index)}
                         className="flex h-11 w-12 items-center justify-center"
                     >
-                        <span 
-                            className={`h-1 w-full ${selectedIndex === index ? 'bg-white' : 'bg-white/50'}`}
-                        />
+                        <span className="h-1 w-full bg-white/50" />
                     </button>
                 ))}
             </div>
