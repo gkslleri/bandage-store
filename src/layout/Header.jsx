@@ -35,10 +35,10 @@ export default function Header() {
 
       {isMenuOpen && (
         <nav className="flex flex-col items-center gap-6 pt-8 pb-12 text-2xl text-gray-500">
-          <Link to='/'>Home</Link>
-          <Link to='/shop'>Product</Link>
-          <Link to='/pricing'>Pricing</Link>
-          <Link to='/contact'>Contact</Link>
+          <Link to='/' onClick={() => setIsMenuOpen(false)}>Home</Link>
+          <Link to='/shop' onClick={() => setIsMenuOpen(false)}>Product</Link>
+          <Link to='/pricing' onClick={() => setIsMenuOpen(false)}>Pricing</Link>
+          <Link to='/contact' onClick={() => setIsMenuOpen(false)}>Contact</Link>
         </nav>
       )}
     </header>
