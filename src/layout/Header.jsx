@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, ShoppingCart, Menu } from 'lucide-react';
+import { Search, ShoppingCart, Menu, Phone } from 'lucide-react';
 import { useState } from "react";
 
 export default function Header() {
@@ -8,6 +8,27 @@ export default function Header() {
 
   return (
     <header className="bg-white text-slate-800">
+
+      <div className="hidden items-center justify-between gap-6 bg-[#252B42] px-6 py-3 text-xs text-white lg:flex">
+        <div className="flex items-center gap-4">
+          <a href="tel:2255550118" className="flex items-center gap-2">
+            <Phone size={14} />
+            <span>(225) 555-0118</span>
+          </a>
+
+          <a href="mailto:michelle.rivera@example.com" className="flex items-center gap-2">
+            <Mail size={14} />
+            <span>michelle.rivera@example.com</span>
+          </a>
+        </div>
+
+        <p className="font-semibold">
+          Follow Us and get a chance to win 80% off
+        </p>
+
+        <span className="font-semibold">Follow Us:</span>
+      </div>
+
       <div className="flex items-center justify-between px-6 py-6 lg:flex-nowrap lg:gap-8">
         <h1 className="text-2xl font-bold">
           <Link to="/">Bandage</Link>
