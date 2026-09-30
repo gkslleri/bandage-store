@@ -63,7 +63,7 @@ export default function EditorsPick() {
 
                         <Link
                             to='/shop'
-                            className='relative block h-[240px] w-full overflow-hidden lg:h-[238px]'
+                            className='relative block h-[500px] w-full overflow-hidden lg:h-[238px]'
                         >
                             <img
                             src="/images/category-kids.png"
