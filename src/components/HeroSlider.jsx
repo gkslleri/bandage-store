@@ -50,9 +50,9 @@ export default function HeroSlider() {
                     {slides.map((slide) => (
                         <div
                             key={slide.id}
-                            className="flex min-h-[640px] min-2-0 flex-[0_0_100%] items-center bg-[url('/images/hero-woman.jpg')] bg-cover bg-[position:35_center] bg-no-repeat lg:min-h-[700px] lg:bg-center"
+                            className="flex min-h-[640px] min-w-0 flex-[0_0_100%] items-center bg-[url('/images/hero-woman.jpg')] bg-cover bg-[position:35%_center] bg-no-repeat lg:min-h-[700px] lg:bg-center"
                         >
-                            <div className="mx-auto flex w-full max-w-[1050] flex-col items-center gap-8 px-12 py-20 text-center lg:items-start lg:text-left">
+                            <div className="mx-auto flex w-full max-w-[1050px] flex-col items-center gap-8 px-12 py-20 text-center lg:items-start lg:text-left">
                                 <p className="text-base font-bold tracking-widest">
                                     {slide.subtitle}
                                 </p>
@@ -89,7 +89,7 @@ export default function HeroSlider() {
             <button
                 type="button"
                 aria-label="Sonraki sayfa"
-                onClick={() => emblaApi?.scrollPrev()}
+                onClick={() => emblaApi?.scrollNext()}
                 className="absolute right-1 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:right-6"
             >
                 <ChevronRight size={40} />
