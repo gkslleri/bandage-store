@@ -29,7 +29,7 @@ export default function Header() {
         <span className="font-semibold">Follow Us:</span>
       </div>
 
-      <div className="flex items-center justify-between px-6 py-6 lg:flex-nowrap lg:gap-8">
+      <div className="flex flex-wrap items-center justify-between px-6 py-6 lg:flex-nowrap lg:gap-8">
         <h1 className="text-2xl font-bold">
           <Link to="/">Bandage</Link>
         </h1>
@@ -74,18 +74,20 @@ export default function Header() {
             <Menu size={20} />
           </button>
         </div>
-      </div>
 
-      <nav
+        <nav
         id="header-menu"
         aria-label="Ana menü"
-        className={` ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center gap-6 pt-8 pb-12 text-2xl text-gray-500 lg:order-2 lg:flex lg:w-auto lg:flex:row lg:py-0 lg:text-sm`}
+        className={` ${isMenuOpen ? 'flex' : 'hidden'} flex-col items-center gap-6 pt-8 pb-12 text-2xl text-gray-500 lg:order-2 lg:flex lg:w-auto lg:flex-row lg:py-0 lg:text-sm`}
       >
         <Link to='/' onClick={() => setIsMenuOpen(false)}>Home</Link>
         <Link to='/shop' onClick={() => setIsMenuOpen(false)}>Product</Link>
         <Link to='/pricing' onClick={() => setIsMenuOpen(false)}>Pricing</Link>
         <Link to='/contact' onClick={() => setIsMenuOpen(false)}>Contact</Link>
       </nav>
+      </div>
+
+      
 
     </header>
   );
