@@ -1,8 +1,25 @@
 export default function HomePage() {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-3xl font-bold mb-4">Home Page</h1>
-      <p className="text-lg">Find the best bandages for your needs!</p>
-    </div>
+    <section className="flex flex-col items-center gap-8 bg-[#96E9FB] px-6 py-16 text-center">
+        <p className="text-base font-bold tracking-widest text-[#252B42]">
+            SUMMER 2020
+        </p>
+
+        <h2 className="text-4xl font-bold leading-tight text-[#252B42]">
+            NEW COLLECTION
+        </h2>
+
+        <p className="max-w-xs text-xl text-[#737373]">
+            We know how large objects will act,
+            but things on a small scale.
+        </p>
+
+        <button
+            type="button"
+            className="rounded bg-[#2DC071] px-10 py-4 text-xl font-bold text-white"
+        >
+            SHOP NOW
+        </button>
+    </section>
   );
 }
