@@ -1,6 +1,7 @@
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 const slides = [
     {
@@ -19,6 +20,25 @@ const slides = [
 
 export default function HeroSlider() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true});
+    const [selectedIndex, setSelectedIndex] = useState(0);
+
+    useEffect(() => {
+        if(!emblaApi) return;
+
+        const updateSelectedIndex = () => {
+            setSelectedIndex(emblaApi.selectedScrollSnap());
+        };
+
+        updateSelectedIndex();
+
+        emblaApi.on('select', updateSelectedIndex);
+        emblaApi.on('reInit', updateSelectedIndex);
+
+        return () => {
+            emblaApi.off('select', updateSelectedIndex);
+            emblaApi.off('reInit', updateSelectedIndex);
+        };
+    }, [emblaApi]);
 
     return (
         <section
@@ -74,6 +94,26 @@ export default function HeroSlider() {
             >
                 <ChevronRight size={40} />
             </button>
+
+            <div
+                aria-label="Slayt seçimi"
+                className="absolute bottom-6 left-1/2 flex -translate-x-1/2"
+            >
+                {slides.map((slide, index) => (
+                    <button
+                        key={slide.id}
+                        type="button"
+                        aria-label={`${index + 1}. slayta git`}
+                        aria-current={selectedIndex === index ? 'true' : undefined}
+                        onClick={() => emblaApi?.scrollTo(index)}
+                        className="flex h-11 w-12 items-center justify-center"
+                    >
+                        <span 
+                            className={`h-1 w-full ${selectedIndex === index ? 'bg-white' : 'bg-white/50'}`}
+                        />
+                    </button>
+                ))}
+            </div>
         </section>
     )
 }
