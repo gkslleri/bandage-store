@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Search, ShoppingCart, Menu, Phone, Mail } from 'lucide-react';
+import { Search, ShoppingCart, Menu, Phone, Mail, UserRound, Heart } from 'lucide-react';
 import { useState } from "react";
 
 export default function Header() {
@@ -35,15 +35,35 @@ export default function Header() {
         </h1>
 
         <div className="flex items-center gap-4 lg:order-3">
-          <button type="button" aria-label="Ara">
+          <Link
+            to='/login'
+            className='hidden items-center gap-2 text-sm font-semibold text-[#23A6F0] lg:flex'
+          >
+            <UserRound size={18} />
+            <span>Login / Register</span>
+          </Link>
+
+          <button type="button" aria-label="Ara" className="text-[#23A6F0]">
             <Search size={20} />
           </button>
 
-          <button type="button" aria-label="Sepet">
+          <button
+            type="button"
+            aria-label="Sepet"
+            className="text-[#23A6F0]"
+          >
             <ShoppingCart size={20} />
           </button>
+          
+          <button
+            type="button"
+            aria-label="Favoriler"
+            className="hidden text-[#23A6F0] lg:flex"
+          >
+            <Heart size={20} />
+          </button>
 
-          <button 
+          <button
             type="button"
             className="lg:hidden"
             aria-label={isMenuOpen ? 'Menüyü kapat' : 'Menüyü aç'}
@@ -64,9 +84,9 @@ export default function Header() {
         <Link to='/' onClick={() => setIsMenuOpen(false)}>Home</Link>
         <Link to='/shop' onClick={() => setIsMenuOpen(false)}>Product</Link>
         <Link to='/pricing' onClick={() => setIsMenuOpen(false)}>Pricing</Link>
-          <Link to='/contact' onClick={() => setIsMenuOpen(false)}>Contact</Link>
-        </nav>
-      
+        <Link to='/contact' onClick={() => setIsMenuOpen(false)}>Contact</Link>
+      </nav>
+
     </header>
   );
 }
