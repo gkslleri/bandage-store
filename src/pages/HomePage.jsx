@@ -1,3 +1,5 @@
+import heroWoman from '../assets/hero-woman.jpg';
+
 export default function HomePage() {
   return (
     <section className="flex flex-col items-center gap-8 bg-[#96E9FB] px-6 py-16 text-center">
@@ -20,6 +22,12 @@ export default function HomePage() {
         >
             SHOP NOW
         </button>
+
+        <img 
+            src={heroWoman}
+            alt="Yaz koleksiyonundan kıyafetler giyen ve alışveriş çantaları taşıyan kadın"
+            className='h-96 w-full object-cover object-[75%_center]'
+        />
     </section>
   );
 }
