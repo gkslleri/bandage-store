@@ -4,7 +4,7 @@ export default function ProductCard({ product }) {
       <img
         src={product.image}
         alt={product.name}
-        className="h-[427px] w-full object-cover"
+        className="h-auto w-full"
       />
 
       <div className="flex flex-col items-center gap-3 px-6 py-6 text-center">
