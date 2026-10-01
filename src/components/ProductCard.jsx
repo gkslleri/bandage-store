@@ -2,7 +2,7 @@ export default function ProductCard({ product }) {
     return (
         <article className="flex w-full flex-col bg-white">
             <img 
-                src={product.imageUrl}
+                src={`${product.discountedPrice.toFixed(2)}`}
                 alt={product.name}
                 className="h-[427px] w-full object-cover"
             />
