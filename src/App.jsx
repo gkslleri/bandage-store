@@ -11,7 +11,7 @@ function App() {
     <BrowserRouter>
       <div className="flex flex-col min-h-screen">
         <Header />
-        <PageContent />
+          <PageContent />
         <Footer />
       </div>
     </BrowserRouter>
