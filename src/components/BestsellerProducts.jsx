@@ -29,7 +29,7 @@ export default function BestsellerProducts() {
                     </p>
                 </div>
 
-                <div className="flex flex-wrap justify-center gap-x-6 gap-y-12">
+                <div className="w-full max-w-[348px] md:w-[calc((100%-24px)/2)] md:max-w-none lg:w-[239px]">
                     {products.map((product) => (
                         <div 
                             key={product.id}

@@ -1,10 +1,10 @@
 export default function ProductCard({ product }) {
   return (
-    <article className="flex w-full flex-col bg-white">
+    <article className="flex h-[427px] w-full items-center justify-center overflow-hidden">
       <img
         src={product.image}
         alt={product.name}
-        className="h-auto w-full"
+        className="object-contain w-full h-full"
       />
 
       <div className="flex flex-col items-center gap-3 px-6 py-6 text-center">
