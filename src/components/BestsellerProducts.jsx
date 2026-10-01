@@ -3,7 +3,7 @@ import ProductCard from "./ProductCard.jsx";
 const products = [
     {
         id: 1,
-        image: '/images/product/1.png',
+        image: '/images/product/1.jpg',
         name: 'Graphic Design',
         department: 'English',
         price: 16.48,
