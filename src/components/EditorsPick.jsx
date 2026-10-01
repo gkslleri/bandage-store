@@ -14,7 +14,7 @@ export default function EditorsPick() {
                     </p>
                 </div>
 
-                <div className="flex flex-col gap-6 lg:flex-row">
+                <div className="mx-auto flex w-full max-w-[325px] flex-col gap-6 lg:max-w-none lg:flex-row">
                     <Link
                         to="/shop"
                         className="relative block h-[500px] w-full overflow-hidden lg:min-w-0 lg:flex-[2]"
