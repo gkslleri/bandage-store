@@ -69,7 +69,7 @@ export default function HeroSlider() {
                                     to='/shop'
                                     className='rounded bg-[#2DC071] px-10 py-4 text-xl font-bold'
                                 >
-                                    SHOP NOW
+                                    Fatih INCE
                                 </Link>
                             </div>
                         </div>
