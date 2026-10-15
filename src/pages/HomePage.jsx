@@ -1,6 +1,7 @@
 import BestsellerProducts from "../components/BestsellerProducts";
 import EditorsPick from "../components/EditorsPick";
 import HeroSlider from "../components/HeroSlider";
+import VitaClassic from "../components/VitaClassic";
 
 export default function HomePage() {
     return (
@@ -8,6 +9,7 @@ export default function HomePage() {
             <HeroSlider />
             <EditorsPick />
             <BestsellerProducts />
+            <VitaClassic />
         </>
     );
 }
