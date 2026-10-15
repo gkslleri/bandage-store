@@ -1,4 +1,5 @@
-import ProductCard from "./ProductCard.jsx";
+import ProductCard from "./productCard";
+
 
 const products = [
   {
@@ -28,6 +29,38 @@ const products = [
   {
     id: 4,
     image: "/images/product/4.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 5,
+    image: "/images/product/5.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 6,
+    image: "/images/product/6.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 7,
+    image: "/images/product/7.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 8,
+    image: "/images/product/8.jpg",
     name: "Graphic Design",
     department: "English Department",
     price: 16.48,
