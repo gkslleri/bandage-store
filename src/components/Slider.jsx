@@ -1,11 +1,13 @@
-import useEmblaCarousel from "embla-carousel-react";
-import { ChevronLeft } from "lucide-react";
 import { Children, useEffect, useState } from "react";
+import useEmblaCarousel from "embla-carousel-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export default function Slider({ children, label }) {
-
     const slides = Children.toArray(children);
-    const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true, duration: 40 });
+    const [emblaRef, emblaApi] = useEmblaCarousel({
+        loop: true,
+        duration: 40,
+    });
     const [selectedIndex, setSelectedIndex] = useState(0);
 
     useEffect(() => {
@@ -45,8 +47,8 @@ export default function Slider({ children, label }) {
                 <>
                     <button
                         type="button"
-                        aria-label="Önceki Sayfa"
-                        onClick={() => emblaApi.scrollPrev()}
+                        aria-label="Önceki slayt"
+                        onClick={() => emblaApi?.scrollPrev()}
                         className="absolute left-1 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:left-6"
                     >
                         <ChevronLeft size={40} />
@@ -63,14 +65,14 @@ export default function Slider({ children, label }) {
 
                     <div
                         role="group"
-                        aria-label="Slayt Seçimi"
-                        className="absolute bottom-6 "
+                        aria-label="Slayt seçimi"
+                        className="absolute bottom-6 left-1/2 flex -translate-x-1/2"
                     >
                         {slides.map((slide, index) => (
                             <button
                                 key={slide.key}
                                 type="button"
-                                aria-label={`${index + 1}. sayfaya git`}
+                                aria-label={`${index + 1}. slayta git`}
                                 aria-current={
                                     selectedIndex === index ? "true" : undefined
                                 }
@@ -81,13 +83,12 @@ export default function Slider({ children, label }) {
 
                                 <span
                                     aria-hidden="true"
-                                    className={`absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 bg-white transition-transform duration-300 ease-in-out ${
-                                        selectedIndex === index
+                                    className={`absolute left-0 top-1/2 h-1 w-full -translate-y-1/2 bg-white transition-transform duration-300 ease-in-out ${selectedIndex === index
                                             ? "translate-x-0"
                                             : selectedIndex > index
-                                            ? "translate-x-full"
-                                            : "-translate-x-full"
-                                    }`}
+                                                ? "translate-x-full"
+                                                : "-translate-x-full"
+                                        }`}
                                 />
                             </button>
                         ))}
