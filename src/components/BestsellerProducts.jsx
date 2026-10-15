@@ -9,6 +9,30 @@ const products = [
     price: 16.48,
     discountPrice: 6.48,
   },
+  {
+    id: 2,
+    image: "/images/product/2.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 3,
+    image: "/images/product/3.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
+  {
+    id: 4,
+    image: "/images/product/4.jpg",
+    name: "Graphic Design",
+    department: "English Department",
+    price: 16.48,
+    discountPrice: 6.48,
+  },
 ];
 
 export default function BestsellerProducts() {
