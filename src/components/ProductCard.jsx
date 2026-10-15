@@ -27,6 +27,17 @@ export default function ProductCard({ product }) {
             ${product.discountPrice.toFixed(2)}
           </span>
         </div>
+
+        <div
+          role="img"
+          aria-label="Renk seçenekleri: mavi, yeşil, turuncu ve lacivert"
+          className="flex items-center gap-2"
+        > 
+          <span className="h-4 w-4 rounded-full bg-[#23A6F0]" />
+          <span className="h-4 w-4 rounded-full bg-[#23856D]" />
+          <span className="h-4 w-4 rounded-full bg-[#E77C40]" />
+          <span className="h-4 w-4 rounded-full bg-[#252B42]" />
+        </div>
       </div>
     </article>
   );
