@@ -1,4 +1,4 @@
-import ProductCard from "./productCard";
+import ProductCard from "./ProductCard.jsx";
 
 
 const products = [
