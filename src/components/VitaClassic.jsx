@@ -10,8 +10,33 @@ export default function VitaClassic() {
                     <h2 className="max-w-sm text-4xl font-bold leading-tight lg:text-6xl">
                         Vita Classic Product
                     </h2>
+
+                    <p className="max-w-xs text-xl lg:text-sm">
+                        We know how large objects will act,
+                        but things on a small scale.
+                    </p>
+
+                    <div className="flex-col flex items-center gap-5 lg:flex-row lg:gap-8">
+                        <span className="text-2xl font-bold">
+                            $16.48
+                        </span>
+
+                        <button type="button"
+                            className="rounded bg-[#2DC071] px-10 py-4 text-sm font-fold"
+                        >
+                            ADD TO CART
+                        </button>
+                    </div>
+                </div>
+
+                <div className="flex w-full justify-center lg:w-1/2">
+                    <img 
+                        src="/images/hero_men.jpg"
+                        alt="Gömlek giyen erkek model"
+                        className="block h-auto w-full max-w-[443px] object-contain object-bottom lg:max-h-[645px]"
+                    />
                 </div>
             </div>
         </section>
-    )
+    );
 }
