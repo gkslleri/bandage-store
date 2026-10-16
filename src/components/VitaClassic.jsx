@@ -21,7 +21,10 @@ const slides = [
 
 export default function VitaClassic() {
   return (
-    <Slider label="Vita Classic koleksiyonu">
+    <Slider 
+        label="Vita Classic koleksiyonu"
+        arrowPosition="top-[55%] lg:top-1/2"
+    >
       {slides.map((slide) => (
         <div
           key={slide.id}

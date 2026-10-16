@@ -2,7 +2,7 @@ import { Children, useEffect, useState } from "react";
 import useEmblaCarousel from "embla-carousel-react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function Slider({ children, label }) {
+export default function Slider({ children, label, arrowPosition = "top-1/2" }) {
     const slides = Children.toArray(children);
     const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
@@ -49,7 +49,7 @@ export default function Slider({ children, label }) {
                         type="button"
                         aria-label="Önceki slayt"
                         onClick={() => emblaApi?.scrollPrev()}
-                        className="absolute left-1 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:left-6"
+                        className={`absolute left-1 ${arrowPosition} flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:left-6`}
                     >
                         <ChevronLeft size={40} />
                     </button>
@@ -58,7 +58,7 @@ export default function Slider({ children, label }) {
                         type="button"
                         aria-label="Sonraki slayt"
                         onClick={() => emblaApi?.scrollNext()}
-                        className="absolute right-1 top-1/2 flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:right-6"
+                        className={`absolute right-1 ${arrowPosition} flex h-11 w-11 -translate-y-1/2 items-center justify-center lg:right-6`}
                     >
                         <ChevronRight size={40} />
                     </button>
