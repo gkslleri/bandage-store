@@ -7,7 +7,7 @@ const slides = [
         description: "We know how large objects will act, but things on a small scale",
         price: 16.48,
         image: "/images/hero_men.png",
-    }
+    },
     {
         id: 2,
         subtitle: "SUMMER 2020",
