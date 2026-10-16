@@ -1,7 +1,7 @@
 export default function NeuralUniverse() {
     return (
-        <section className="bg-white">
-            <div className="mx-auto flex max-w-[1440px] flex-col lg:flex-row">
+        <section className="bg-white px-12 lg:px-24">
+            <div className="mx-auto flex max-w-[1440px] flex-col-reverse lg:flex-row">
                 <div className="flex w-full items-end justify-center lg:w-1/2">
                     <img
                         src="/images/sarilanlar.png"
@@ -10,7 +10,7 @@ export default function NeuralUniverse() {
                     />
                 </div>
 
-                <div className="flex w-full flex-col items-center justify-center gap-8 px-8 py-20 text-center lg:w-1/2 lg:items-start lg:px-16 lg:text-left">
+                <div className="flex w-full flex-col items-center justify-center gap-10 px-8 py-20 text-center lg:w-1/2 lg:items-start lg:px-16 lg:text-left">
                     <p className="text-base font-bold text-[#BDBDBD]">
                         SUMMER 2020
                     </p>
