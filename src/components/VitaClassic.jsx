@@ -23,7 +23,7 @@ export default function VitaClassic() {
   return (
     <Slider 
         label="Vita Classic koleksiyonu"
-        arrowPosition="top-[55%] lg:top-1/2"
+        arrowPosition="top-[70%] lg:top-1/2"
     >
       {slides.map((slide) => (
         <div
