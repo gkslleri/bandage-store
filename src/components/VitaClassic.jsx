@@ -57,7 +57,7 @@ export default function VitaClassic() {
 
             <div className="flex w-full justify-center lg:w-1/2">
               <img
-                src="/images/hero-man.png"
+                src="/images/hero-men.png"
                 alt="Beyaz gömlek giyen erkek model"
                 className="block h-auto w-full max-w-[443px] object-contain object-bottom lg:max-h-[645px]"
               />
