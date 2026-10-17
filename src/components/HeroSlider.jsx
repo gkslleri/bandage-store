@@ -24,7 +24,7 @@ export default function HeroSlider() {
       {slides.map((slide) => (
         <div
           key={slide.id}
-          className="flex min-h-[640px] items-center bg-[url('/images/hero-woman.jpg')] bg-cover bg-[position:35%_center] bg-no-repeat lg:min-h-[700px] lg:bg-center"
+          className="flex min-h-[640px] items-center bg-[url('/images/hero-woman.jpg')] bg-cover bg-[position:45%_center] bg-no-repeat lg:min-h-[700px] lg:bg-center"
         >
           <div className="mx-auto flex w-full max-w-[1050px] flex-col items-center gap-8 px-12 py-20 text-center lg:items-start lg:text-left">
             <p className="text-base font-bold tracking-widest">
