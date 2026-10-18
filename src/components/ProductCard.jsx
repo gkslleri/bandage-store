@@ -1,11 +1,11 @@
-export default function ProductCard({ product }) {
+export default function ProductCard({ product, imageHeight = "h-[427px]", imageFit = "object-contain" }) {
   return (
     <article className="flex w-full flex-col bg-white">
-      <div className="flex h-[427px] w-full items-center justify-center overflow-hidden">
+      <div className={`flex h-[427px] w-full shrink-0 items-center justify-center overflow-hidden bg-[#FAFAFA] ${imageHeight}`}>
         <img
           src={product.image}
           alt={product.name}
-          className="h-full w-full object-contain"
+          className={`h-full w-full object-contain ${imageFit}`}
         />
       </div>
 
